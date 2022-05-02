@@ -8,6 +8,7 @@ let btnMultiplicar = <HTMLButtonElement>(
 );
 let btnPotenciar = <HTMLButtonElement>document.getElementById("btnPotenciar");
 let Divresultado = <HTMLParagraphElement>document.getElementById("resultado");
+let btnBorrar = <HTMLButtonElement>document.getElementById("btnBorrar");
 let Num1: number;
 let Num2: number;
 
@@ -34,6 +35,8 @@ btnSumar.addEventListener("click", () => {
     Num1,
     Num2
   )}`;
+  console.log("El resultado es ", calcular("Suma", Num1, Num2));
+});
 });
 btnRestar.addEventListener("click", () => {
   Num1 = Number(numero1.value);
@@ -43,6 +46,8 @@ btnRestar.addEventListener("click", () => {
     Num1,
     Num2
   )}`;
+  console.log("El resultado es ", calcular("Resta", Num1, Num2));
+});
 });
 btnDividir.addEventListener("click", () => {
   Num1 = Number(numero1.value);
@@ -52,6 +57,8 @@ btnDividir.addEventListener("click", () => {
     Num1,
     Num2
   )}`;
+  console.log("El resultado es ", calcular("Dividir", Num1, Num2));
+});
 });
 btnMultiplicar.addEventListener("click", () => {
   Num1 = Number(numero1.value);
@@ -61,6 +68,8 @@ btnMultiplicar.addEventListener("click", () => {
     Num1,
     Num2
   )}`;
+  console.log("El resultado es ", calcular("Multiplicar", Num1, Num2));
+});
 });
 btnPotenciar.addEventListener("click", () => {
   Num1 = Number(numero1.value);
@@ -70,4 +79,11 @@ btnPotenciar.addEventListener("click", () => {
     Num1,
     Num2
   )}`;
+  console.log("El resultado es ", calcular("Potenciar", Num1, Num2));
+});
+btnBorrar.addEventListener("click", () => {
+
+  window.alert("POR FAVOR VUELVA A INGRESAR LOS NUMEROS");
+  numero1.value = "";
+  numero2.value = "";
 });
